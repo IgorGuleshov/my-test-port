@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навыки | Портфолио</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-glow hero-glow-left" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-right" aria-hidden="true"></div>
+    <nav class="nav container">
+      <div class="logo"><a href="index.html">Portfolio</a></div>
+      <div class="nav-links">
+        <a href="about.html">Обо мне</a>
+        <a href="skills.html">Навыки</a>
+        <a href="projects.html">Проекты</a>
+        <a href="funny.html">Смешное</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section-muted reveal is-visible">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Навыки</p>
+          <h2>Что я использую в работе</h2>
+        </div>
+        <div class="chips">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>Figma</span>
+          <span>Responsive Design</span>
+          <span>UI/UX</span>
+          <span>Git</span>
+          <span>SEO Basics</span>
+        </div>
+        <div class="skills-panel">
+          <article class="skills-column">
+            <h3>Design</h3>
+            <p>Wireframes, UI systems, адаптивные макеты, дизайн интерфейсов и визуальная иерархия.</p>
+          </article>
+          <article class="skills-column">
+            <h3>Frontend</h3>
+            <p>Семантическая верстка, анимации, интерактивность, оптимизация и чистая компонентная логика.</p>
+          </article>
+          <article class="skills-column">
+            <h3>Product Thinking</h3>
+            <p>Фокус на конверсии, пользовательских сценариях, доверии к бренду и понятной подаче ценности.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+      var currentPath = location.pathname.split("/").pop() || "index.html";
+      navLinks.forEach(function (link) {
+        link.classList.toggle("is-active", link.getAttribute("href") === currentPath);
+      });
+    })();
+  </script>
+</body>
+</html>

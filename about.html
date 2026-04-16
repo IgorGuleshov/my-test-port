@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обо мне | Портфолио</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-glow hero-glow-left" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-right" aria-hidden="true"></div>
+    <nav class="nav container">
+      <div class="logo"><a href="index.html">Portfolio</a></div>
+      <div class="nav-links">
+        <a href="about.html">Обо мне</a>
+        <a href="skills.html">Навыки</a>
+        <a href="projects.html">Проекты</a>
+        <a href="funny.html">Смешное</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section container reveal is-visible">
+      <div class="section-heading">
+        <p class="section-label">Обо мне</p>
+        <h2>Коротко о моем подходе</h2>
+      </div>
+      <div class="about-grid">
+        <p>
+          Я создаю сайты и интерфейсы, в которых сочетаются эстетика, логика и внимание к деталям.
+          Для меня важно не просто сделать красиво, а создать опыт, который вызывает доверие и ведет пользователя к действию.
+        </p>
+        <p>
+          Работаю с лендингами, корпоративными сайтами, интернет-магазинами и внутренними сервисами.
+          Люблю чистую структуру, высокую скорость загрузки и интерфейсы, в которых каждая секция работает на результат.
+        </p>
+      </div>
+      <div class="trust-grid">
+        <article class="trust-card">
+          <h3>Четкая структура</h3>
+          <p>Продумываю сценарии пользователя, чтобы контент читался легко, а навигация вела к целевому действию.</p>
+        </article>
+        <article class="trust-card">
+          <h3>Сильный визуал</h3>
+          <p>Использую современную типографику, аккуратные акценты и контрастные блоки без визуального шума.</p>
+        </article>
+        <article class="trust-card">
+          <h3>Результат в срок</h3>
+          <p>Быстро собираю рабочий прототип, согласовываю детали и довожу решение до готового финала.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+      var currentPath = location.pathname.split("/").pop() || "index.html";
+      navLinks.forEach(function (link) {
+        link.classList.toggle("is-active", link.getAttribute("href") === currentPath);
+      });
+    })();
+  </script>
+</body>
+</html>

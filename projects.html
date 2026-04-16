@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проекты | Портфолио</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-glow hero-glow-left" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-right" aria-hidden="true"></div>
+    <nav class="nav container">
+      <div class="logo"><a href="index.html">Portfolio</a></div>
+      <div class="nav-links">
+        <a href="about.html">Обо мне</a>
+        <a href="skills.html">Навыки</a>
+        <a href="projects.html">Проекты</a>
+        <a href="funny.html">Смешное</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section container reveal is-visible">
+      <div class="section-heading">
+        <p class="section-label">Проекты</p>
+        <h2>Избранные работы</h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-card-header">
+            <div class="project-badge">Landing Page</div>
+            <span class="project-result">+38% заявок</span>
+          </div>
+          <h3>Промо-сайт для IT-компании</h3>
+          <p>
+            Разработал адаптивный лендинг с акцентом на конверсию, четкий оффер и понятную структуру контента.
+          </p>
+          <div class="project-tags">
+            <span>UI Strategy</span>
+            <span>Development</span>
+          </div>
+          <a href="#">Открыть кейс</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <div class="project-badge">E-commerce</div>
+            <span class="project-result">Рост среднего чека</span>
+          </div>
+          <h3>Интернет-магазин локального бренда</h3>
+          <p>
+            Спроектировал каталог, карточки товаров и мобильную версию, чтобы повысить удобство покупки.
+          </p>
+          <div class="project-tags">
+            <span>Catalog UX</span>
+            <span>Mobile First</span>
+          </div>
+          <a href="#">Открыть кейс</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <div class="project-badge">Dashboard</div>
+            <span class="project-result">Быстрее ежедневных задач</span>
+          </div>
+          <h3>Внутренний сервис аналитики</h3>
+          <p>
+            Создал интерфейс панели управления с фокусом на читаемость данных и скорость ежедневной работы команды.
+          </p>
+          <div class="project-tags">
+            <span>Data UX</span>
+            <span>Dashboard</span>
+          </div>
+          <a href="#">Открыть кейс</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+      var currentPath = location.pathname.split("/").pop() || "index.html";
+      navLinks.forEach(function (link) {
+        link.classList.toggle("is-active", link.getAttribute("href") === currentPath);
+      });
+    })();
+  </script>
+</body>
+</html>
