@@ -3,8 +3,10 @@ const fs = require("node:fs");
 const path = require("node:path");
 const url = require("node:url");
 
-const PORT = 8080;
-const HOST = "127.0.0.1";
+// const PORT = 8080;
+// const HOST = "127.0.0.1";
+const PORT = process.env.PORT || 8080;
+const HOST = "0.0.0.0";
 
 const ROOT_DIR = __dirname; // служим файлы из корня проекта
 
